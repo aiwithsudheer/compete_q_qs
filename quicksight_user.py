@@ -20,7 +20,7 @@ def create_quicksight_user(aws_account_id, namespace, email, iam_role_arn, user_
         dict: Response from QuickSight API
     """
     # Initialize QuickSight client
-    quicksight = boto3.client('quicksight', region_name=os.getenv('AWS_REGION'))
+    quicksight = boto3.client('quicksight',)
     
     # Use email as username if not provided
     if user_name is None:
